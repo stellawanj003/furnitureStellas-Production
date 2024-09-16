@@ -1,6 +1,17 @@
+const playButton = document.getElementById('play-video-btn');
+const video = document.getElementById('showroom-video');
 
 
-console.log(  "U")
+video.muted = true; 
+video.playsinline = true;
+
+
+playButton.addEventListener('click', function() {
+
+    video.play().catch(function(error) {
+        console.log("Video play failed:", error);
+    });
+});
 
 
 function countUp(element) {
